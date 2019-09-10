@@ -261,7 +261,7 @@ MERGE STRATEGIES
 
 ---
 
-Dealing with merge conflicts is one of the halmarks of coding on a team.  
+Dealing with merge conflicts is one of the hallmarks of coding on a team.  
 No matter how hard you try, you will overwrite, write, whitespace change, 
 refactor, or rename something that someone else also changed the same week or even the same hour.  
 
