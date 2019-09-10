@@ -389,12 +389,112 @@ $ git rebase --onto master their-branch great-feature
 
 ```
 ---
-```bash
-$ git rebase -i HEAD~5
 
-```
+# [fit] interactive rebase
+
 ---
 
+```bash
+$ git rebase -i HEAD~6
+...
+  1 pick 039dafe add Git 201 + how to play well with others talk md file
+  2 pick 03b1ebf rename
+  3 pick 6bf0899 more changes
+  4 pick 0b04410 more
+  5 pick 8fbe3a3 final changes
+  6 pick a967ba8 6
+  7
+  8 # Rebase f979d3f..a967ba8 onto f979d3f (6 commands)
+  9 #
+ 10 # Commands:
+ 11 # p, pick <commit> = use commit
+ 12 # r, reword <commit> = use commit, but edit the commit message
+ 13 # e, edit <commit> = use commit, but stop for amending
+ 14 # s, squash <commit> = use commit, but meld into previous commit
+ 15 # f, fixup <commit> = like "squash", but discard this commit's log message
+ 16 # x, exec <command> = run command (the rest of the line) using shell
+ 17 # b, break = stop here (continue rebase later with 'git rebase --continue')
+ 18 # d, drop <commit> = remove commit
+ 19 # l, label <label> = label current HEAD with a name
+ 20 # t, reset <label> = reset HEAD to a label
+ 21 # m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+ 22 # .       create a merge commit using the original merge commit's
+ 23 # .       message (or the oneline, if no original merge commit was
+ 24 # .       specified). Use -c <commit> to reword the commit message.
+ 25 #
+ 26 # These lines can be re-ordered; they are executed from top to bottom.
+ 27 #
+ 28 # If you remove a line here THAT COMMIT WILL BE LOST.
+ 29 #
+ 30 # However, if you remove everything, the rebase will be aborted.
+ 31 #
+ 32 # Note that empty commits are commented out
+```
+---
+```bash
+  1 pick 039dafe add Git 201 + how to play well with others talk md file
+  2 s 03b1ebf rename
+  3 s 6bf0899 more changes
+  4 s 0b04410 more
+  5 s 8fbe3a3 final changes
+  6 s a967ba8 6
+  7
+  8 # Rebase f979d3f..a967ba8 onto f979d3f (6 commands)
+  9 #
+ 10 # Commands:
+ 11 # p, pick <commit> = use commit
+ 12 # r, reword <commit> = use commit, but edit the commit message
+ 13 # e, edit <commit> = use commit, but stop for amending
+ 14 # s, squash <commit> = use commit, but meld into previous commit
+ 15 # f, fixup <commit> = like "squash", but discard this commit's log message
+ 16 # x, exec <command> = run command (the rest of the line) using shell
+ 17 # b, break = stop here (continue rebase later with 'git rebase --continue')
+ 18 # d, drop <commit> = remove commit
+ 19 # l, label <label> = label current HEAD with a name
+ 20 # t, reset <label> = reset HEAD to a label
+ 21 # m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+ 22 # .       create a merge commit using the original merge commit's
+ 23 # .       message (or the oneline, if no original merge commit was
+ 24 # .       specified). Use -c <commit> to reword the commit message.
+ 25 #
+ 26 # These lines can be re-ordered; they are executed from top to bottom.
+ 27 #
+ 28 # If you remove a line here THAT COMMIT WILL BE LOST.
+ 29 #
+ 30 # However, if you remove everything, the rebase will be aborted.
+ 31 #
+ 32 # Note that empty commits are commented out
+```
+---
+```bash
+  1 # This is a combination of 6 commits.
+  2 # This is the 1st commit message:
+  3 add Git 201 + how to play well with others talk md file
+  4 # This is the commit message #2:
+  5 # This is the commit message #3:
+  6 # This is the commit message #4:
+  7 # This is the commit message #5:
+  8 # This is the commit message #6:
+  9 # Please enter the commit message for your changes. Lines starting
+ 10 # with '#' will be ignored, and an empty message aborts the commit.
+ 11 #
+ 12 # Date:      Sun Sep 8 19:31:06 2019 -0700
+ 13 #
+ 14 # interactive rebase in progress; onto f979d3f
+ 15 # Last commands done (6 commands done):
+ 16 #    squash 8fbe3a3 final changes
+ 17 #    squash a967ba8 6
+ 18 # No commands remaining.
+ 19 # You are currently rebasing branch 'git-201' on 'f979d3f'.
+ 20 #
+ 21 # Changes to be committed:
+ 22 # new file:   2019_09_10_git_201_how_to_play_well_with_others.md
+ 23 #
+```
+
+save again and you're set.
+
+---
 
 # [fit] cherry-pick
 
@@ -660,7 +760,15 @@ Let go of expectation on quick responses.  We are a global economy run by volunt
 
 ---
 
-# [fit] live demo
+# [fit] how to play well with others
+- team dynamics discussion
+- global dynamics discussion
+- pair-programming discussion
+- topics from the group discussion
+
+---
+
+# [fit] live demo + practice
 Link to this talk
 [https://github.com/stacybird/talks/blob/master/2019_09_10_git_201_how_to_play_well_with_others.md](https://github.com/stacybird/talks/blob/master/2019_09_10_git_201_how_to_play_well_with_others.md)
 
